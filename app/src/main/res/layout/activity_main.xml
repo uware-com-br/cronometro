@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cronômetro"
+        android:textColor="#FFF"
+        android:textSize="40sp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:indeterminate="false"
+        android:progress="100"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:progressDrawable="@drawable/pb_timer"
+        android:secondaryProgress="100"/>
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar"
+        app:layout_constraintEnd_toEndOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="@id/progressBar"
+        app:layout_constraintTop_toTopOf="@id/progressBar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
